@@ -42,8 +42,8 @@ async function getUserDataFromRequest(req) {
   });
 }
 
-app.get('/test', (req, res) => {
-  res.json('test ok');
+app.get('/', (req, res) => {
+  res.json('Server Running');
 });
 
 app.get('/messages/:userId', async (req, res) => {
@@ -127,6 +127,7 @@ app.post('/register', async (req, res) => {
 });
 
 const server = app.listen(4040);
+console.log('Server running');
 
 const wss = new ws.WebSocketServer({ server });
 wss.on('connection', (connection, req) => {
