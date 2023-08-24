@@ -126,7 +126,7 @@ app.post('/register', async (req, res) => {
   }
 });
 
-const server = app.listen(4040);
+const server = app.listen(443);
 console.log('Server running');
 
 const wss = new ws.WebSocketServer({ server });
