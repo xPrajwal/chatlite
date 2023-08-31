@@ -43,7 +43,7 @@ async function getUserDataFromRequest(req) {
 }
 
 app.get('/', (req, res) => {
-  res.json('Server Running');
+  res.json(`Server running on ${process.env.PORT}`);
 });
 
 app.get('/messages/:userId', async (req, res) => {
